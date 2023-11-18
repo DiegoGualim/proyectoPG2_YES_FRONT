@@ -138,44 +138,19 @@ export default {
             items: [],
             fields: [
                 {
-                    key: 'nombre',
+                    key: 'descripcion',
                     sortable: true,
-                    label: 'Nombre'
+                    label: 'Descripcion'
                 },
                 {
-                    key: 'apellido',
+                    key: 'tipo',
                     sortable: true,
-                    label: 'Apellido'
+                    label: 'Tipo'
                 },
                 {
-                    key: 'edad',
+                    key: 'id_cuenta_fb',
                     sortable: true,
-                    label: 'Edad'
-                },
-                {
-                    key: 'direccion',
-                    sortable: true,
-                    label: 'Direccion'
-                },
-                {
-                    key: 'telefono',
-                    sortable: true,
-                    label: 'Edad'
-                },
-                {
-                    key: 'username',
-                    sortable: true,
-                    label: 'User'
-                },
-                {
-                    key: 'email',
-                    sortable: true,
-                    label: 'Email'
-                },
-                {
-                    key: 'type',
-                    sortable: true,
-                    label: 'Tipo de usuario'
+                    label: 'ID CUENTA FACEBOOK'
                 },
                 { key: 'actions', label: 'Acciones' }
             ],
@@ -210,10 +185,10 @@ export default {
     async beforeCreate() {},
     methods: {
         async deleteRow(item) {
-            console.log(item.id, 'mi pana')
+            console.log(item.id_comentario, 'mi pana')
             const deletations = await requestHandler
                 .async_fetch(
-                    `${process.env.VUE_APP_BACKEND}/api/user/${item.id}`,
+                    `${process.env.VUE_APP_BACKEND}/api/sentimental/${item.id_comentario}`,
                     requestOptions.delete()
                 )
                 .then(() => {
@@ -228,7 +203,7 @@ export default {
             // Increment the toast count
             // Create the message
             const vNodesMsg = h('p', { class: ['text-center', 'mb-0'] }, [
-                h('strong', 'Usuario Eliminado con Éxito')
+                h('strong', 'Eliminado con Éxito')
             ])
             // Pass the VNodes as an array for message and title
             this.$bvToast.toast([vNodesMsg], {
@@ -251,7 +226,7 @@ export default {
         // new methods
         async fetchData() {
             this.items = await requestHandler.async_fetch(
-                `${process.env.VUE_APP_BACKEND}/api/user`,
+                `${process.env.VUE_APP_BACKEND}/api/sentimental/report`,
                 requestOptions.get()
             )
         },

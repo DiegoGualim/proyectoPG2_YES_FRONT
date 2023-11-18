@@ -222,7 +222,7 @@ export default {
             console.log(this.form)
             const reconsultation = await requestHandler
                 .async_fetch(
-                    `${process.env.VUE_APP_BACKEND}/api/v1/user`,
+                    `${process.env.VUE_APP_BACKEND}/api/user`,
                     requestOptions.post(this.form)
                 )
                 .then(() => {

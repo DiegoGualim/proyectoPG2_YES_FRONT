@@ -1,23 +1,21 @@
+.visualizer {
+    min-width: 10rem;
 
-.visualizer{
-	min-width: 10rem;
-    
-    .card-header{
+    .card-header {
         background-color: #e2e9e9;
         font-weight: bold;
-        height: 4rem;    
+        height: 4rem;
     }
-    
 }
 
-.header-visualizer{
+.header-visualizer {
     font-weight: bold;
     margin: 0;
 }
 
 .small {
-	max-width: 600px;
-	margin: auto !important;
+    max-width: 600px;
+    margin: auto !important;
 }
 
 .containermain {
@@ -32,14 +30,14 @@
     filter: shadow(color=#999999, direction=135, strength=2);
 }
 
-.excelbutton{
-    background-color: #57B25B !important;
+.excelbutton {
+    background-color: #57b25b !important;
 }
 
-#navbar .nav-item a{
-    color:#fff;
+#navbar .nav-item a {
+    color: #fff;
 }
-#navbar .dropdown-item{
+#navbar .dropdown-item {
     color: #212529 !important;
 }
 
@@ -55,39 +53,36 @@ img.resize2 {
     height: 2rem;
     width: 2rem;
     border-radius: 2pt;
-    vertical-align:text-bottom;
+    vertical-align: text-bottom;
     padding: 0rem !important;
     margin-left: 0.5rem;
 }
 
-.card.footer{
+.card.footer {
     margin-top: 7rem;
-	border-radius: 0rem;
+    border-radius: 0rem;
     text-align: right;
     font-size: 10pt;
 }
 
 .footer .card-body {
-	flex: 1 1 auto;
-	min-height: 1px;
-	padding: 0.8rem;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0.8rem;
     padding-bottom: 0.8rem;
     padding-right: 1rem;
-    
-
 }
 
-.footer.card{
-
-    background-color: #696660 !important;
-    border:0px solid #6E6658 !important;
+.footer.card {
+    background-color: #1c1b4d !important;
+    border: 0px solid #1c1b4d !important;
 }
 
-.ar{
+.ar {
     text-align: right !important;
 }
 
-.btnform{
+.btnform {
     margin-top: 2rem;
 }
 
@@ -97,6 +92,6 @@ img.resize2 {
     min-height: 100vh;
 }
 
-.maincontent{
+.maincontent {
     flex: 1;
 }

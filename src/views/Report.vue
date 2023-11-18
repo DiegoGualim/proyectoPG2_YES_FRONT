@@ -2,9 +2,12 @@
     <div class="content">
         <Nav />
         <div class="maincontent">
-            <h3><I> Prueba Nivel 1 </I></h3>
+            <h3>Reporte de Comentarios</h3>
             <b-container class="containermain mt-4">
-                <FormPrueba />
+                <FormComments />
+            </b-container>
+            <b-container class="containermain mt-4">
+                <TableCommets />
             </b-container>
         </div>
         <Footer></Footer>
@@ -12,14 +15,17 @@
 </template>
 
 <script>
-import FormPrueba from '@/components/Pruebas/FormPrueba1.vue'
+// @ is an alias to /src
+import FormComments from '@/components/Reports/Form.vue'
+import TableCommets from '@/components/Reports/Table.vue'
 import Nav from '@/components/navbar/navbar.vue'
 import Footer from '@/components/Footer/Footer.vue'
 
 export default {
-    name: 'pruebaLevel1Demo',
+    name: 'Commets',
     components: {
-        FormPrueba,
+        FormComments,
+        TableCommets,
         Nav,
         Footer
     }
