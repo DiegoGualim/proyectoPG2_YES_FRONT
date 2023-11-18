@@ -14,7 +14,12 @@
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav v-if="type === 'admin'">
                     <b-nav-item
-                        ><router-link to="/report">Reporte de Comentarios</router-link></b-nav-item
+                        ><router-link to="/report">Consulta de Comentarios</router-link></b-nav-item
+                    >
+                    <b-nav-item
+                        ><router-link to="/reportComments"
+                            >Reporte de Comentarios</router-link
+                        ></b-nav-item
                     >
                     <b-nav-item-dropdown text="Admin">
                         <b-dropdown-item

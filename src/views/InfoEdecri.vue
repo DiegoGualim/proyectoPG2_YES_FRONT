@@ -2,46 +2,34 @@
     <div class="content">
         <Nav />
         <div align="center">
-            <img alt="" src="../assets/logoedecri-sinfondo.png" width="200px" height="200px" />
+            <img alt="" src="../assets/logo_umg_sin_fondo.png" width="230px" height="230px" />
         </div>
 
         <h4>
-            Escuela De Educación Especial Y Centro De Rehabilitación Integral Edecri
+            Universidad Mariano Gálvez de Guatemala
             <br />
             Coban Alta Verapaz
-            <a href="https://www.facebook.com/edecri" target="_blank" rel="noopener"
+            <a
+                href="https://www.facebook.com/profile.php?id=100057188661392"
+                target="_blank"
+                rel="noopener"
                 >Mas información</a
             >.
         </h4>
-        <h4>MISIÓN</h4>
+        <h4>Intrucciones</h4>
         <ul>
             <li>
                 <center>
                     <I>
                         <p>
-                            Construir oportunidades y condiciones paque los niños y jovenes con
-                            discapacidad de nuestra <br />
-                            de nuestra comunidad reciban la atencion que requieren para aprender y
-                            desarrollar sus habilidades <br />
-                            para una integracion familiar, educativa, productiva y social a la
-                            comunidad en un marco de derechos.
-                        </p>
-                    </I>
-                </center>
-            </li>
-        </ul>
-        <h4>VISIÓN</h4>
-        <ul>
-            <li>
-                <center>
-                    <I>
-                        <p>
-                            Construir oportunidades y condiciones paque los niños y jovenes con
-                            discapacidad de nuestra <br />
-                            de nuestra comunidad reciban la atencion que requieren para aprender y
-                            desarrollar sus habilidades <br />
-                            para una integracion familiar, educativa, productiva y social a la
-                            comunidad en un marco de derechos.
+                            Para poder analizar los comentarios de su pagina debe configurar su
+                            cuenta de facebook como desarrollador. Clic en
+                            <a
+                                href="https://developers.facebook.com/tools/explorer/"
+                                target="_blank"
+                                rel="noopener"
+                                >iniciar sesión</a
+                            >.
                         </p>
                     </I>
                 </center>
@@ -49,17 +37,18 @@
         </ul>
         <h4>
             <I>
-                “Las cosas más bellas y mejores en el mundo, no pueden verse ni tocarse pero se
-                sienten en el corazón”
+                “Conoceréis la verdad, y la verdad os hará libres significado”
             </I>
         </h4>
-        <ul>
-            <li>
-                <a href="https://es.wikipedia.org/wiki/Helen_Keller" target="_blank" rel="noopener"
-                    >(Hellen Keller)</a
-                >
-            </li>
-        </ul>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h4>Nombre: Yesica Cruz</h4>
+        <h4>Carnet: 0902 - 19 - 4609</h4>
         <Footer></Footer>
     </div>
 </template>

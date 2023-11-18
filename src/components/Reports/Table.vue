@@ -1,6 +1,5 @@
 <template>
     <b-container fluid>
-        <!-- User Interface controls -->
         <b-row>
             <b-col lg="6" class="my-1">
                 <b-form-group
@@ -229,76 +228,6 @@ export default {
                 `${process.env.VUE_APP_BACKEND}/api/sentimental/report`,
                 requestOptions.get()
             )
-        },
-        /* exportExcel() {
-      const a = document.createElement("a");
-      document.body.appendChild(a);
-      a.style = "display: none";
-
-      var wb = XLSX.utils.book_new();
-      
-      wb.Props = {
-        Title: "Libro De Bancos",
-        Subject: "Exportado de datos",
-        Author: "Fundación APA",
-        CreatedDate: new Date(),
-      };
-      wb.SheetNames.push("Libro");
-      
-      var ws = XLSX.utils.json_to_sheet(this.filteredItems,{origin: { r: 4, c: 0 }});
-      //ws['A1'].s = {};
-      wb.Sheets["Libro"] = ws;
-      wb.Props
-      
-      var wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
-
-      function s2ab(s) {
-        var buf = new ArrayBuffer(s.length); //convert s to arrayBuffer
-        var view = new Uint8Array(buf); //create uint8array as viewer
-        for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff; //convert to octet
-        return buf;
-      }
-
-      const blob = new Blob([s2ab(wbout)], {
-        type: "application/octet-stream",
-      });
-      this.fileCSVBlob = window.URL.createObjectURL(blob);
-      a.href = this.fileCSVBlob;
-      a.download = `LibroDeBancos.xlsx`;
-      a.click();
-      window.URL.revokeObjectURL(this.fileCSVBlob);
-    }, */
-        async exportExcel() {
-            const a = document.createElement('a')
-            document.body.appendChild(a)
-            a.style = 'display: none'
-
-            const wbout = await this.postCheckExcel(this.filteredItems)
-            console.log(wbout)
-
-            function s2ab(s) {
-                var buf = new ArrayBuffer(s.length) //convert s to arrayBuffer
-                var view = new Uint8Array(buf) //create uint8array as viewer
-                for (var i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff //convert to octet
-                return buf
-            }
-
-            const blob = new Blob([s2ab(wbout)], {
-                type: 'application/octet-stream'
-            })
-            this.fileCSVBlob = window.URL.createObjectURL(blob)
-            a.href = this.fileCSVBlob
-            a.download = `LibroDeBancos.xlsx`
-            a.click()
-            window.URL.revokeObjectURL(this.fileCSVBlob)
-        },
-        async postCheckExcel(items) {
-            console.log(items)
-            const excelstring = await requestHandler.async_fetch_text_response(
-                `${process.env.VUE_APP_BACKEND}/api/v1/checks/excel`,
-                requestOptions.post(items)
-            )
-            return excelstring
         }
     },
     async created() {

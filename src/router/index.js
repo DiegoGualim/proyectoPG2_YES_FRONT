@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import { Role } from '../helpers/helpersRole'
 import User from '../views/User.vue'
 import Report from '../views/Report.vue'
+import ReportCommets from '../views/ReportComments.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -12,7 +13,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home,
-        meta: { authorize: [Role.user, Role.admin, Role.libre] }
+        meta: { authorize: [Role.user, Role.admin] }
     },
     {
         path: '/login',
@@ -23,13 +24,19 @@ const routes = [
         path: '/user',
         name: 'User',
         component: User,
-        meta: { authorize: [Role.admin] }
+        meta: { authorize: [Role.user, Role.admin] }
     },
     {
         path: '/report',
         name: 'Report',
         component: Report,
-        meta: { authorize: [Role.admin] }
+        meta: { authorize: [Role.user, Role.admin] }
+    },
+    {
+        path: '/reportComments',
+        name: 'ReportCommets',
+        component: ReportCommets,
+        meta: { authorize: [Role.user, Role.admin] }
     },
     {
         path: '/about',
